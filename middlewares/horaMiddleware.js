@@ -1,7 +1,7 @@
 const dateMiddleware = (req, res, next) => {
     const now = new Date();
     const formattedTime = `${ponerCero(now.getHours())} :  ${ponerCero(now.getMinutes())} : ${ponerCero(now.getSeconds())}`;
-    req.dateType = `La era actual es ${formattedTime}`;
+    req.dateType = formattedTime;
     next();
   };
   const ponerCero = numero => {
